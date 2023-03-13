@@ -1,5 +1,6 @@
 package com.chaeseong.mysampleapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -26,8 +27,6 @@ class MainActivity : AppCompatActivity() {
 		Toast.makeText(this, auth.currentUser?.uid.toString(), Toast.LENGTH_SHORT).show()
 
 		binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
-
-
 
 		val joinBtnClicked = findViewById<Button>(R.id.joinBtn)
 		joinBtnClicked.setOnClickListener {
@@ -70,10 +69,14 @@ class MainActivity : AppCompatActivity() {
 					if (task.isSuccessful) {
 						Toast.makeText(this,"ok",Toast.LENGTH_SHORT).show()
 						Toast.makeText(this, auth.currentUser?.uid.toString(), Toast.LENGTH_SHORT).show()
+
+						val intent = Intent(this, BoardListActivity::class.java)
+						startActivity(intent)
 					} else {
 						Toast.makeText(this,"fail",Toast.LENGTH_SHORT).show()
 					}
 				}
 		}
 	}
+
 }
