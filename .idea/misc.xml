@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/layout/activity_board_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_board_write.xml" value="0.10733695652173914" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35217794253938833" />
+        <entry key="app/src/main/res/layout/listview_item.xml" value="0.121875" />
       </map>
     </option>
   </component>
